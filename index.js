@@ -1,18 +1,14 @@
-const express = require('express');
-const server = express();
 
-// const userRouter = require("./users/userRouter.js");
-// const postRouter = require("./posts/postRouter.js");
+const server = require('./server.js');
 
 
-server.use(express.json());
-// server.use('./api/users', userRouter);
-// server.use('./api/posts', postRouter);
-
-
-server.get('/', (req, res) => {
-    res.send('Server is talking!');
-});
+// server.get('/', (req, res) => {
+//     const nameInsert = (req.name) ? `${req.name}` : '';
+//     res.send(
+//         `<h1>Welcome ${nameInsert} to here!</h1>`
+        
+//         );
+// });
 
 
 server.listen(9000, () => console.log('\n=== API on port 9000 ===\n'));
